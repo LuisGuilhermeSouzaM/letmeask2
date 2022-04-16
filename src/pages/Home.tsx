@@ -10,11 +10,9 @@ import '../styles/auth.scss';
 
 export function Home() {
     let navigate = useNavigate();
-
-    function NavigateToNewRoom(){
-        return(
-            navigate("/rooms/new")
-        )
+    
+    function HandleCreateRoom(){
+        navigate("/rooms/new")
     }
     return (
         <div id="page-auth">
@@ -26,7 +24,7 @@ export function Home() {
         <main>
         <div className="main-content">
                 <img src={logoImg} alt="Letmeask" />
-                <button onClick={NavigateToNewRoom} className="create-room">
+                <button onClick={HandleCreateRoom} className="create-room">
                     <img src={googleIconImg} alt="Logo do Google" />
                     Crie sua sala com o Google
                 </button>
