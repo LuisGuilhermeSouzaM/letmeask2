@@ -1,4 +1,5 @@
-import { render } from "react-dom";
+import { createRoot } from 'react-dom/client';
+
 import {
   BrowserRouter,
   Routes,
@@ -8,9 +9,10 @@ import App from "./App";
 import { Home } from "./pages/Home";
 import { NewRoom } from "./pages/NewRoom";
 // import your route components too
+const container = document.getElementById('root');
+const root = createRoot(container!); // createRoot(container!) if you use TypeScript
 
-
-render(
+root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
@@ -20,5 +22,4 @@ render(
         </Route>
     </Routes>
   </BrowserRouter>,
-  document.getElementById("root")
 );
