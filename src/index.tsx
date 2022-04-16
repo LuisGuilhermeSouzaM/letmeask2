@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-import { auth, database } from './services/firebase';
+import { firebase, auth, database } from './services/firebase';
+
+import './styles/global.scss';
 
 ReactDOM.render(
   <React.StrictMode>
